@@ -4,12 +4,12 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://www.8abd.com/"/>
   <updated>2016-09-06T01:55:25.000Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://www.8abd.com/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>韧青子</name>
     
   </author>
   
@@ -17,8 +17,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2016/09/06/hello-world/"/>
-    <id>http://yoursite.com/2016/09/06/hello-world/</id>
+    <link href="http://www.8abd.com/2016/09/06/hello-world/"/>
+    <id>http://www.8abd.com/2016/09/06/hello-world/</id>
     <published>2016-09-06T01:55:25.000Z</published>
     <updated>2016-09-06T01:55:25.000Z</updated>
     
