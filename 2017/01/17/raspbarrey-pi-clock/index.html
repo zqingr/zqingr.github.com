@@ -1,28 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>韧青子的博客</title>
-  <subtitle>韧青子</subtitle>
-  <link href="/atom.xml" rel="self"/>
-  
-  <link href="http://www.8abd.com/"/>
-  <updated>2017-01-17T07:10:12.000Z</updated>
-  <id>http://www.8abd.com/</id>
-  
-  <author>
-    <name>韧青子</name>
-    
-  </author>
-  
-  <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>用树莓派(Raspberry pi)和八段数码管用javascript制作电子时钟</title>
-    <link href="http://www.8abd.com/2017/01/17/raspbarrey-pi-clock/"/>
-    <id>http://www.8abd.com/2017/01/17/raspbarrey-pi-clock/</id>
-    <published>2017-01-17T05:59:28.000Z</published>
-    <updated>2017-01-17T07:10:12.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>初学者制作，把自己的制作过程记录下来与大家分享。用了一个树莓派的扩展版只是方便一些，没有扩展版的直接把线接到树莓派上就好了。  </p>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="Nolan Zi"><title>用树莓派(Raspberry pi)和八段数码管用javascript制作电子时钟 · 韧青子的博客</title><meta name="description" content="初学者制作，把自己的制作过程记录下来与大家分享。用了一个树莓派的扩展版只是方便一些，没有扩展版的直接把线接到树莓派上就好了。  
+八段数码管的原理和接线这里就不赘述了，可以参考这篇文章：https://www.h5jun.com/post/pi-num8.html
+我们来着重说一下电子时钟的代码和原"><meta name="keywords" content="javascript"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="stylesheet" href="/css/ds-embed.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">韧青子的博客</a></h3><div class="description"><p>Nothing lasts forever.</p></div></div></div><ul class="social-links"><li><a href="/atom.xml"><i class="fa fa-rss"></i></a></li><li><a href="http://weibo.com/27028931"><i class="fa fa-weibo"></i></a></li></ul><div class="footer"><a target="_blank" href="/"><span>Theme by </span></a><a href="https://www.caicai.me"> CaiCai</a><span>&</span><a href="https://github.com/Ben02/hexo-theme-Anatole"> Ben</a><div class="by_farbox"><a href="https://hexo.io/zh-cn/" target="_blank">Proudly published with Hexo&#65281;</a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首页</a></li><li><a href="/about">关于</a></li><li><a href="/archives">归档</a></li><li><a href="/links">友链</a></li></div><div class="information"><div class="back_btn"><li><a onclick="window.history.go(-1)" class="fa fa-chevron-left"> </a></li></div><div class="avatar"><img src="https://avatars1.githubusercontent.com/u/8044905?v=3&amp;s=460"></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>用树莓派(Raspberry pi)和八段数码管用javascript制作电子时钟</a></h3></div><div class="post-content"><p>初学者制作，把自己的制作过程记录下来与大家分享。用了一个树莓派的扩展版只是方便一些，没有扩展版的直接把线接到树莓派上就好了。  </p>
 <h4 id="八段数码管的原理和接线"><a href="#八段数码管的原理和接线" class="headerlink" title="八段数码管的原理和接线"></a>八段数码管的原理和接线</h4><p>这里就不赘述了，可以参考这篇文章：<a href="https://www.h5jun.com/post/pi-num8.html" target="_blank" rel="external">https://www.h5jun.com/post/pi-num8.html</a></p>
 <p>我们来着重说一下电子时钟的代码和原理。</p>
 <h4 id="电子时钟的原理"><a href="#电子时钟的原理" class="headerlink" title="电子时钟的原理"></a>电子时钟的原理</h4><p>八段数码管其实我们只能让这四个数字同时显示一样的数字，那怎么才能实现显示不同的数字呢？</p>
@@ -76,81 +54,14 @@
 <video width="250" controls><br>  <source src="https://github.com/zqingr/zqingr.github.com/blob/master/video/IMG_0310.mp4?raw=true" type="video/mp4"><br></video>
 
 <h4 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> rpio = <span class="built_in">require</span>(<span class="string">"rpio"</span>);</div><div class="line"></div><div class="line"><span class="keyword">const</span> NUMS = [</div><div class="line">	[<span class="number">0</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>],  <span class="comment">//0</span></div><div class="line">	[<span class="number">3</span>,<span class="number">7</span>],  <span class="comment">//1</span></div><div class="line">	[<span class="number">0</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">7</span>],  <span class="comment">//2</span></div><div class="line">	[<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">7</span>],  <span class="comment">//3</span></div><div class="line">	[<span class="number">3</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">7</span>],  <span class="comment">//4</span></div><div class="line">	[<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>], <span class="comment">//5</span></div><div class="line">	[<span class="number">0</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>], <span class="comment">//6</span></div><div class="line">	[<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>], <span class="comment">//7</span></div><div class="line">	[<span class="number">0</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>], <span class="comment">//8</span></div><div class="line">	[<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>]  <span class="comment">//9</span></div><div class="line">];</div><div class="line"><span class="keyword">const</span> DP = [<span class="number">2</span>]; <span class="comment">//.</span></div><div class="line"><span class="keyword">const</span> digitGroup = [<span class="number">29</span>, <span class="number">31</span>, <span class="number">33</span>, <span class="number">35</span>, <span class="number">37</span>, <span class="number">36</span>, <span class="number">38</span>, <span class="number">40</span>];  <span class="comment">//数码管输出端口</span></div><div class="line"><span class="keyword">const</span> portGroup = [<span class="number">15</span>, <span class="number">16</span>, <span class="number">18</span>, <span class="number">32</span>];  <span class="comment">//数码管选择端口，注意这里的顺序要对应从左到右的显示</span></div><div class="line"><span class="keyword">const</span> buttonPin = <span class="number">12</span>;  <span class="comment">//按钮的接口</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">setNum</span>(<span class="params">num, dp</span>) </span>&#123;</div><div class="line">	<span class="keyword">const</span> rule = dp ? NUMS[num].concat(DP) : NUMS[num];</div><div class="line"></div><div class="line">	digitGroup.forEach(<span class="function">(<span class="params">n, i</span>)=&gt;</span> &#123;</div><div class="line">		rpio.write(n, rule.indexOf(i) &gt; <span class="number">-1</span> ? rpio.LOW : rpio.HIGH);			</div><div class="line">	&#125;);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fillNum</span>(<span class="params">num, length = <span class="number">2</span></span>)</span>&#123;</div><div class="line">	<span class="keyword">return</span> num &lt; <span class="built_in">Math</span>.pow(<span class="number">10</span>, length<span class="number">-1</span>) ? <span class="built_in">Array</span>(length<span class="number">-1</span>).fill(<span class="number">0</span>).join(<span class="string">""</span>) + num : num.toString();</div><div class="line">&#125;</div><div class="line"></div><div class="line">digitGroup.concat(portGroup).forEach(<span class="function"><span class="params">n</span> =&gt;</span> &#123;</div><div class="line">	rpio.open(n, rpio.OUTPUT);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">rpio.open(buttonPin, rpio.INPUT);</div><div class="line"></div><div class="line"><span class="keyword">while</span>(<span class="number">1</span>) &#123;</div><div class="line">	portGroup.forEach(<span class="function">(<span class="params">port, i</span>)=&gt;</span>&#123;</div><div class="line">		<span class="keyword">let</span> showHours = (fillNum(<span class="keyword">new</span> <span class="built_in">Date</span>().getHours()) + fillNum(<span class="keyword">new</span> <span class="built_in">Date</span>().getMinutes())).split(<span class="string">""</span>);</div><div class="line">		<span class="keyword">let</span> showMinutes = (fillNum(<span class="keyword">new</span> <span class="built_in">Date</span>().getMinutes()) + fillNum(<span class="keyword">new</span> <span class="built_in">Date</span>().getSeconds())).split(<span class="string">""</span>);</div><div class="line">		date = rpio.read(buttonPin) ? showMinutes : showHours;</div><div class="line"></div><div class="line">		rpio.write(port, <span class="number">1</span>);</div><div class="line">		setNum(date[i], i === <span class="number">1</span> &amp;&amp; <span class="keyword">new</span> <span class="built_in">Date</span>().getSeconds()%<span class="number">2</span>);</div><div class="line">		rpio.msleep(<span class="number">1</span>);</div><div class="line">		rpio.write(port, <span class="number">0</span>);</div><div class="line">	&#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;初学者制作，把自己的制作过程记录下来与大家分享。用了一个树莓派的扩展版只是方便一些，没有扩展版的直接把线接到树莓派上就好了。  &lt;/p&gt;
-&lt;h4 id=&quot;八段数码管的原理和接线&quot;&gt;&lt;a href=&quot;#八段数码管的原理和接线&quot; class=&quot;headerlink&quot; title
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>树莓派3B的GPIO引脚的逻辑值</title>
-    <link href="http://www.8abd.com/2017/01/16/raspberry-pi-40pin/"/>
-    <id>http://www.8abd.com/2017/01/16/raspberry-pi-40pin/</id>
-    <published>2017-01-16T06:03:58.000Z</published>
-    <updated>2017-01-17T06:06:54.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>树莓派3B的GPIO 引脚的逻辑值：</p>
-<p><img src="http://zqingr.github.com/images/pi3_gpio.png?raw=true" alt="zqingr.github.com/images/pi3_gpio.png"></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;树莓派3B的GPIO 引脚的逻辑值：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://zqingr.github.com/images/pi3_gpio.png?raw=true&quot; alt=&quot;zqingr.github.com/images/pi3_gpio.png&quot;&gt;&lt;/
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>var的声明方式已经推出历史舞台了吗？</title>
-    <link href="http://www.8abd.com/2016/09/14/is-var-dead/"/>
-    <id>http://www.8abd.com/2016/09/14/is-var-dead/</id>
-    <published>2016-09-14T07:02:49.000Z</published>
-    <updated>2017-01-17T02:58:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>原文链接：<a href="http://wesbos.com/is-var-dead/" target="_blank" rel="external">Is-Var-Dead?</a></p>
-</blockquote>
-<p>新的标准es6出来以后，我们了解了两种新的声明方式，<code>let</code> 和 <code>const</code> - 它们俩都是干嘛的，作用域是什么样的？当然，通过大家对es6标准的了解，相信大家都知道了，但是又一个问题：<strong>到底在什么合适的时候用到它们？</strong>  </p>
-<p>这个问题是一个相当热门的话题，因为有些人仍然使用<code>var</code>的声明方式，我们在看文章的时候可能会看到有人会说：<code>var</code>的声明方式已经完蛋了，以后都替换成<code>let</code>和<code>const</code>的声明方式吧！  </p>
-<p>有一种观点是：“<code>var</code> 没有结束 - 因为有些地方还是需要用到它的 - 它是和<code>let</code>和<code>const</code>不同的是它是函数作用域(function scoped)而<code>let</code>和<code>const</code>是块级作用域，而且，<code>var</code>可以多次重新用<code>var</code>声明，已完全可以继续使用它。”因为没有什么严格的规定，所以没有什么正确的答案，仅仅只是一种观点，你可以自己决定是否使用<code>var</code>。</p>
-<p>在本文里呢，我只想列出多个关于<code>var</code>是否已经放弃的话题，至于怎么选择，聪明的你需要自己去权衡了。</p>
-<p>来看看这个观点－ <a href="https://mathiasbynens.be/notes/es6-const" target="_blank" rel="external">Mathias Bynens</a>说：只要不是声明变量后要立马去改变它的属性的，你就可以不用考虑直接用<code>const</code>吧！</p>
-<p>Later在他的文章里说到<code>let</code>和<code>const</code>的区别</p>
-<ul>
-<li>默认的话就用<code>const</code></li>
-<li>如果你声明的值需要立马去改变它的话就用<code>let</code></li>
-<li>在es6里永远不要用<code>var</code></li>
-</ul>
-<p>无论什么时候如果你要声明一个变量，假定它就是<code>const</code>。当你写代码的时候要去改变你声明的变量的时候再把<code>const</code>更改为<code>let</code>。这样的话你就用<code>const</code>可以保持你声明的变量不可变，这样有利于减少程序的不可预见性。</p>
-<p>另一种比较流行的观点是<a href="http://blog.getify.com/constantly-confusing-const/" target="_blank" rel="external">Kyle Simpson</a>提出的(这个👨男人写过很多牛逼的javascript书哦)：</p>
-<ul>
-<li>把<code>var</code>用到顶级的作用域可以让它声明的变量作用到各个作用域中</li>
-<li>把<code>let</code>用的确定的小的作用域里面</li>
-<li>把<code>let</code>替换成<code>const</code>，当你下面的值需要去改变的时候再改回来，当然你如果声明这个变量的时候确定要改变它的话那就直接食用<code>let</code>就好了</li>
-</ul>
-<p>他说，从根本上说，当你在比较大的作用域下是可以使用<code>var</code>把它声明的变量用到其它需要的函数里面去，当你用小型的作用域的时候就使用<code>let</code>，如果你敲代码的时候突然发现你需要去改变它，那你就回去把<code>const</code>替换成<code>let</code>。如果你使用的<code>let</code>，把它重构为<code>const</code>也是比较容易的。</p>
-<p>综合这些观点，你可以自己做出选择了，而我自己会默认用<code>const</code>，当需要去改变这个值当时候就用<code>let</code>替换掉它，而且还是完全的摆脱<code>var</code>吧。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;原文链接：&lt;a href=&quot;http://wesbos.com/is-var-dead/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Is-Var-Dead?&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;新的标准es6出来
-    
-    </summary>
-    
-    
-  </entry>
-  
-</feed>
+</div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2017-01-17</span><i class="fa fa-comment-o"></i><a href="/2017/01/17/raspbarrey-pi-clock/#comments">评论</a><i class="fa fa-tag"></i></div></div></div></div><div class="share"><div class="evernote"> <a href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank" class="fa fa-bookmark"></a></div><div class="weibo"> <a href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));" class="fa fa-weibo"></a></div><div class="twitter"> <a href="http://twitter.com/home?status=,http://www.8abd.com/2017/01/17/raspbarrey-pi-clock/,韧青子的博客,用树莓派(Raspberry pi)和八段数码管用javascript制作电子时钟,;" class="fa fa-twitter"></a></div></div><div class="pagination"><ul class="clearfix"><li class="next pagbuttons"><a role="navigation" href="/2017/01/16/raspberry-pi-40pin/" title="树莓派3B的GPIO引脚的逻辑值" class="btn">下一篇</a></li></ul></div><a id="comments"></a><div data-thread-key="2017/01/17/raspbarrey-pi-clock/" data-title="用树莓派(Raspberry pi)和八段数码管用javascript制作电子时钟" data-url="http://www.8abd.com/2017/01/17/raspbarrey-pi-clock/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"zqingr"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+
+</script></div></div></div></div><script src="/js/jquery.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script></body></html>
