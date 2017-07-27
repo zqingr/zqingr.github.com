@@ -5,6 +5,7 @@
 	<link rel="manifest" href="/manifest.json">
 </head>
 <body>
+<div id="nav"></div>
  <h2>----Worker</h2>
 1. Dedicated Worker： 只能被创建它的 JS 访问，创建它的页面关闭，它的生命周期就结束了。<br>
 2. Shared Worker：共享的 worker，可以被同一域名下的 JS 访问，关联的页面都关闭时，它的生命周期就结束了。<br>
@@ -41,10 +42,7 @@ CSRF 跨站请求伪造<br>
 完成一次CSRF攻击，受害者必须依次完成两个步骤：<br>
 1.登录受信任网站A，并在本地生成Cookie。<br>
 2.在不登出A的情况下，访问危险网站B。<br>
-<br>
-<br>
-<br>
-<br>
+
 <h2>----项目中使用过哪些优化方法</h2><br>
 合并脚本和样式表，CSS Sprites <br>
 开启GZip，精简JavaScript，移除重复脚本，图像优化<br>
@@ -90,14 +88,7 @@ flex: flex布局<br>
 通过@media媒体查询，查询当前设置的屏幕倍率，统一设置transform<br>
 设置屏幕宽度为设计的尺寸。<br>
 <meta name="viewport" content="width=750, user-scalable=no"><br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 <h2>----VUE源码 </h2><br>
 1.利用Object.defineProperty里的set和get方法，通过Observer构造函数去遍历要监听的数组和对象<br>
 2.通过Dep构造函数完成一个订阅发布者模式<br>
@@ -133,16 +124,6 @@ flex: flex布局<br>
 职责链模式<br>
 定义：这个模式会解耦一个请求的发送者(sender)和接收者(receiver)。这是通过一个对象链完成的，每一个对象本身都可以处理这个请求或将其传递到下一个对象。<br>
 用途：DOM的事件处理用了一个责任链<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 当输入url时发生了什么<br>
 1.DNS 查询<br>
 浏览器检查缓存和host是否记录，没有的话查询DNS服务器<br>
@@ -186,14 +167,21 @@ Object.observe<br>
 process.nextTick
 
 
-
-
 	<script>
 	if('serviceWorker' in navigator) {
 	  navigator.serviceWorker
 	           .register('sw.js')
 	           .then(function() { console.log("Service Worker Registered"); });
 	}
+	var $h2List = document.querySelectorAll("h2");
+	var html = ""
+
+	$h2List.forEach(($h2, i) => {
+		$h2.id = "h2" + i
+		html += "<li style='margin: 20px 0;'><a href='#h2"+ i + "'>" + $h2.innerHTML + "</a></li>"
+	})
+	document.querySelector("#nav").innerHTML = html
+
 	</script>
 	<script type="text/javascript" src="static/index.js"></script>
 </body>
