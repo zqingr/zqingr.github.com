@@ -1,44 +1,39 @@
-var VERSION = 'v1.1';
-
-// 缓存
-self.addEventListener('install', function(event) {
-  event.waitUntil(
-    caches.open(VERSION).then(function(cache) {
-      return cache.addAll([
+var cacheName = 'weatherPWA-step-6-1';
+var filesToCache = [
         './index.html',
         './static/index.js',
-      ]);
+    ];
+
+self.addEventListener('install', function(e) {
+  console.log('[ServiceWorker] Install');
+  e.waitUntil(
+    caches.open(cacheName).then(function(cache) {
+      console.log('[ServiceWorker] Caching app shell');
+      return cache.addAll(filesToCache);
     })
   );
 });
 
-// 缓存更新
-self.addEventListener('activate', function(event) {
-  event.waitUntil(
-    caches.keys().then(function(cacheNames) {
-      console.log(cacheNames)
-      return Promise.all(
-        cacheNames.map(function(cacheName) {
-          // 如果当前版本和缓存版本不一致
-          if (cacheName !== VERSION) {
-            return caches.delete(cacheName);
-          }
-        })
-      );
+self.addEventListener('activate', function(e) {
+  console.log('[ServiceWorker] Activate');
+  e.waitUntil(
+    caches.keys().then(function(keyList) {
+      return Promise.all(keyList.map(function(key) {
+        if (key !== cacheName) {
+          console.log('[ServiceWorker] Removing old cache', key);
+          return caches.delete(key);
+        }
+      }));
     })
   );
+  return self.clients.claim();
 });
 
-// 捕获请求并返回缓存数据
-self.addEventListener('fetch', function(event) {
-  event.respondWith(caches.match(event.request).catch(function() {
-    return fetch(event.request);
-  }).then(function(response) {
-    caches.open(VERSION).then(function(cache) {
-      cache.put(event.request, response);
-    });
-    return response.clone();
-  }).catch(function() {
-    return caches.match('./static/mm1.jpg');
-  }));
+self.addEventListener('fetch', function(e) {
+  console.log('[ServiceWorker] Fetch', e.request.url);
+  e.respondWith(
+    caches.match(e.request).then(function(response) {
+      return response || fetch(e.request);
+    })
+  );
 });
