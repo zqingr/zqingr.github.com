@@ -16,6 +16,7 @@ child_process 模块来创建子进程，<br>
 exec - 使用子进程执行命令<br>
 spawn - 使用指定的命令行参数创建新进程。<br>
 Fork -是 spawn()的特殊形式, fork会在父进程与子进程之间，建立一个通信管道，用于进程之间的通信<br>
+
 <h2>----缓存</h2><br>
 · request 里含有 if-modified-since，它的值是上一次请求`  <br>
 response发来的last-modified<br>
@@ -124,7 +125,7 @@ flex: flex布局<br>
 职责链模式<br>
 定义：这个模式会解耦一个请求的发送者(sender)和接收者(receiver)。这是通过一个对象链完成的，每一个对象本身都可以处理这个请求或将其传递到下一个对象。<br>
 用途：DOM的事件处理用了一个责任链<br>
-当输入url时发生了什么<br>
+<h2>----当输入url时发生了什么 </h2><br>
 1.DNS 查询<br>
 浏览器检查缓存和host是否记录，没有的话查询DNS服务器<br>
 2. HTTP传输<br>
@@ -165,6 +166,23 @@ Promise.then<br>
 MutationObserver<br>
 Object.observe<br>
 process.nextTick
+<h2>hybrid</h2>
+<img style="width:100%" src="static/hybrid.png" alt="">
+<h2>栅格化布局和弹性布局</h2>
+<h3>栅格化布局优点</h3>
+能提高网页的规范性，提高开发速度和减少维护成本。在栅格系统里面，页面中所有组件的尺寸都是有规律的。这对一些大型网站的开发和维护来说，是非常好的。<br>
+基于栅格进行设计，可以让整个网站各个页面的布局保持一致。<br>
+<h3>栅格化布局缺点</h3>
+牺牲了部分的灵活性<br>
+<h3>栅格化布局对比弹性布局</h3>
+他俩都很不错，是可以同时使用的。<br>
+1. 栅格化布局更适合建设大的页面，可以很容易的管理页面中的组件的尺寸和布局。<br>
+2. flex更适合将内部的内容按照想要的方式对齐，适合比较小的细节比较多的模块。<br>
+3. flex比较适合一行或者一列的布局 <br>
+4. flex对浏览器的兼容性有要求。<br>
+<h2>webpack插件</h2>
+首先，定义一个函数，用户可以传入一个option对象<br>
+然后，需要设一个func.prototype.apply函数。这个函数是提供给webpack运行时调用的。webpack会在这里注入compiler对象。<br>
 
 
 	<script>
