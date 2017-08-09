@@ -183,6 +183,16 @@ process.nextTick
 <h2>webpack插件</h2>
 首先，定义一个函数，用户可以传入一个option对象<br>
 然后，需要设一个func.prototype.apply函数。这个函数是提供给webpack运行时调用的。webpack会在这里注入compiler对象。<br>
+<h2>BFC</h2>
+BFC 是指一个独立的块级渲染区域，只有Block-level Box参与，该区域拥有一套渲染规则来约束块级盒子的布局，且与区域外部无关。<br>
+float的值不为none；<br>
+overflow的值不为visible(可以为hidden,scroll,auto)；<br>
+display的值为inline-block,table-cell,table-caption,flex,inline-flex中的任何一个；<br>
+position的值为absolute,fixed(不为static,relative中的任何一个)；<br>
+作用<br>
+1.自适应两栏布局
+2.清除内部浮动
+3.防止垂直 margin 重叠
 
 
 	<script>
