@@ -1,4 +1,4 @@
-importScripts('/static/js/workbox-sw.prod.v2.1.3.js');/**
+importScripts('./static/js/workbox-sw.prod.v2.1.3.js');/**
  * @file service-worker.js with workbox api
  * @desc [example](https://workbox-samples.glitch.me/examples/workbox-sw/)
  * @author yourname(someone@somecompany.com)
@@ -16,26 +16,26 @@ const workboxSW = new WorkboxSW({
 // Define precache injection point.
 workboxSW.precache([
   {
-    "url": "/index.html",
-    "revision": "c406a38a4a4ced1ac522beb386c53040"
+    "url": "index.html",
+    "revision": "69032df2af2a61cfaf1f607b1fc219a7"
   },
   {
-    "url": "/static/css/index.2767400f.css"
+    "url": "static/css/index.2767400f.css"
   },
   {
-    "url": "/static/js/index.f97e251b.js"
+    "url": "static/js/index.0b6ab416.js"
   },
   {
-    "url": "/static/js/manifest.7253881e.js"
+    "url": "static/js/manifest.0a093f3d.js"
   },
   {
-    "url": "/static/js/vendor.ad9efe15.js"
+    "url": "static/js/vendor.ad9efe15.js"
   },
   {
-    "url": "/static/js/vue.8268a876.js"
+    "url": "static/js/vue.8268a876.js"
   },
   {
-    "url": "/static/js/workbox-sw.prod.v2.1.3.js",
+    "url": "static/js/workbox-sw.prod.v2.1.3.js",
     "revision": "a9890beda9e5f17e4c68f42324217941"
   }
 ]);
